@@ -33,7 +33,7 @@ public class ProductController {
 
 	@GetMapping
 	public Page<ProductDto> list(
-			@PageableDefault(sort = "name", direction = Direction.ASC, page = 0, size = 10) Pageable paginacao) {
+			@PageableDefault(sort = "id", direction = Direction.ASC, page = 0, size = 10) Pageable paginacao) {
 		return productService.list(paginacao);
 	}
 
@@ -46,7 +46,7 @@ public class ProductController {
 	@GetMapping("/search")
 	public Page<ProductDto> search(@RequestParam(required = false) Double max_price,
 			@RequestParam(required = false) Double min_price, @RequestParam(required = false) String q,
-			@PageableDefault(sort = "name", direction = Direction.ASC, page = 0, size = 10) Pageable paginacao) {
+			@PageableDefault(sort = "id", direction = Direction.ASC, page = 0, size = 10) Pageable paginacao) {
 		return productService.search(max_price, min_price, q, paginacao);
 	}
 

@@ -6,8 +6,11 @@ import org.springframework.data.domain.Page;
 
 import com.api.crudprodutos.model.Product;
 
+import lombok.Getter;
+
+@Getter
 public class ProductDto {
-	
+
 	private String description;
 	private Long id;
 	private String name;
@@ -20,24 +23,8 @@ public class ProductDto {
 		this.price = product.getPrice();
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public BigDecimal getPrice() {
-		return price;
-	}
-	
 	public static Page<ProductDto> converter(Page<Product> products) {
 		return products.map(ProductDto::new);
 	}
-	
+
 }

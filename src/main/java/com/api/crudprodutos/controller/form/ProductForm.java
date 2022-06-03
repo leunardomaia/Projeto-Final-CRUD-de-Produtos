@@ -9,31 +9,19 @@ import javax.validation.constraints.NotNull;
 import com.api.crudprodutos.model.Product;
 import com.api.crudprodutos.repository.ProductRepository;
 
+import lombok.Getter;
+
+@Getter
 public class ProductForm {
 
-	@NotNull
-	@NotEmpty
+	@NotNull @NotEmpty
 	private String description;
 
-	@NotNull
-	@NotEmpty
+	@NotNull @NotEmpty
 	private String name;
 
-	@NotNull
-	@DecimalMin(value = "0.0")
+	@NotNull @DecimalMin(value = "0.0")
 	private BigDecimal price;
-
-	public String getDescription() {
-		return description;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public BigDecimal getPrice() {
-		return price;
-	}
 
 	public Product converter() {
 		return new Product(description, name, price);
