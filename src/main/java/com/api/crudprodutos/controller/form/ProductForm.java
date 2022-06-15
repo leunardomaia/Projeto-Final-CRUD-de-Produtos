@@ -9,9 +9,11 @@ import javax.validation.constraints.NotNull;
 import com.api.crudprodutos.model.Product;
 import com.api.crudprodutos.repository.ProductRepository;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public class ProductForm {
 
 	@NotNull @NotEmpty
