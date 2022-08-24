@@ -10,7 +10,7 @@ Este projeto foi realizado durante a trilha Open Banking do Programa de Bolsas d
 - H2
 - Swagger
 
-#### Documentação: </h5> 
+#### Documentação:
 
 Com o projeto no ar acesse a documentação [aqui](http://localhost:9999/swagger-ui.html).
 
